@@ -18,11 +18,16 @@ jobs:
   publish:
     name: Publish Plugins
     runs-on: ubuntu-latest
+    # KRİTİK: Botun repoya yazma yetkisi alması için bu blok şart
+    permissions:
+      contents: write
+    
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN}}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0 # Tüm geçmişi çekmek, push hatalarını önlemeye yardımcı olabilir
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
