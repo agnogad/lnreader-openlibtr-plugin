@@ -1,59 +1,58 @@
-# LNReader Plugins
+# 📚 OpenLibTR — LNReader Eklentisi
 
-<p>
-<img alt="Total number of available plugins" src="https://raw.githubusercontent.com/LNReader/lnreader-plugins/plugins/v3.0.0/total.svg">
-<img alt="Open plugin requests" src="https://img.shields.io/github/issues/lnreader/lnreader-plugins/Plugin%20Request?color=success&label=plugin%20requests">
-<img alt="Open bug reports" src="https://img.shields.io/github/issues/lnreader/lnreader-plugins/Bug?color=red&label=bugs">
-</p>
+OpenLibTR, Türkçe çeviri romanlarını [LNReader](https://github.com/LNReader/lnreader) uygulaması üzerinden okumana olanak tanıyan bir topluluk eklentisidir. Tüm içerikler [openlibtr](https://github.com/agnogad/openlibtr) deposundan çekilmektedir.
 
-Community-driven plugin repository for [LNReader](https://github.com/LNReader/lnreader). This repository hosts plugins and manages related issues and requests.
+---
 
-## Quick Start
+## 🚀 Kurulum
 
-**Prerequisites:** Node.js >= 20 
+LNReader uygulamasına bu eklentiyi eklemek için aşağıdaki adımları izle:
 
-```bash
-npm install
-npm run dev:start
-```
+### 1. LNReader'ı Aç
+Uygulamayı açıp **Ayarlar (Settings)** bölümüne git.
 
-## Documentation
-
-- **[Quick Start Guide](./docs/quickstart.md)** - Create your first plugin
-- **[Plugin Development](./docs/docs.md)** - Complete API reference
-- **[Testing Guide](./docs/website-tutorial.md)** - Test plugins using the web interface
-- **[Komga Plugin](./docs/komga-plugin.md)** - Self-hosted server integration
-
-## Testing Methods
-
-### Web Interface
-
-```bash
-npm run dev:start
-```
-
-Open [localhost:3000](http://localhost:3000) to test plugins interactively. See the [testing guide](./docs/website-tutorial.md) for details.
-
-### Mobile App
-
-**From GitHub (Automated):**
-
-Push your changes to the `master` branch. The [GitHub Action](./.github/workflows/publish-plugins.yml) automatically builds and publishes plugins to the `plugins` branch.
-
-Add your repository URL to the app:
+### 2. Eklenti Deposunu Ekle
+**Eklentiler → Depo Ekle (Plugins → Add Repository)** seçeneğine tıkla ve aşağıdaki URL'yi yapıştır:
 
 ```
-https://raw.githubusercontent.com/<username>/<repo>/plugins/<tag>/.dist/plugins.min.json
+https://raw.githubusercontent.com/agnogad/lnreader-openlibtr-plugin/refs/heads/plugins/v3.0.0/.dist/plugins.min.json
 ```
 
-**From Localhost:**
+### 3. Eklentiyi Yükle
+Depo eklendikten sonra listeden **OpenLibTR** eklentisini bulup **Yükle** butonuna bas.
 
-```bash
-npm run serve:dev
-```
+### 4. Okumaya Başla
+Eklenti aktif hale geldiğinde kütüphanede OpenLibTR kaynak olarak görünecektir. Romanları keşfedebilir, arayabilir ve okuyabilirsin.
 
-Add `http://10.0.2.2/.dist/plugins.min.json` (Android emulator) to the app. Requires `.env` configuration (see `.env.template`).
+---
 
-## Disclaimer
+## ✨ Özellikler
 
-The developers are not affiliated with any content providers. If you are a non-aggregator website owner, you may request plugin removal via [Discord](https://discord.gg/QdcWN4MD63) or by [creating an issue](https://github.com/LNReader/lnreader-plugins/issues/new). Removed sites are added to the [blacklist](BLACKLIST.json).
+- 📖 Tüm mevcut Türkçe romanları listeler
+- 🔍 Başlığa göre roman arama desteği
+- 📑 Bölümleri otomatik olarak `Bölüm 1`, `Bölüm 2` formatında gösterir
+- 🖼️ Kapak resimleri otomatik olarak yüklenir
+- 🔄 En son güncellenen veya en çok bölümlü romanlara göre sıralama
+- ⚡ Markdown formatındaki bölüm içerikleri otomatik HTML'e dönüştürülür
+
+---
+
+## 📂 İçerik Kaynağı
+
+Bu eklenti içerikleri doğrudan şu depodan çeker:
+
+👉 [github.com/agnogad/openlibtr](https://github.com/agnogad/openlibtr)
+
+İçerik eklemek, hata bildirmek veya katkıda bulunmak istiyorsan yukarıdaki depoya pull request açabilirsin.
+
+---
+
+## 🛠️ Sorun Bildirme
+
+Bir hata ile karşılaşırsan ya da eksik/yanlış içerik fark edersen lütfen [Issues](https://github.com/agnogad/lnreader-openlibtr-plugin/issues) sekmesinden bildir.
+
+---
+
+## 📄 Lisans
+
+Bu proje açık kaynaklıdır. İçerikler ilgili çevirmenlere aittir.
